@@ -20,7 +20,7 @@
                 display.value += number;
             }
             
-            // Add subtle animation
+            
             display.classList.add('success');
             setTimeout(() => display.classList.remove('success'), 200);
         }
@@ -34,7 +34,7 @@
             operator = op;
             waitingForNewInput = true;
             
-            // Show operator in display temporarily
+            
             display.value += ' ' + getOperatorSymbol(op) + ' ';
             
             setTimeout(() => {
@@ -96,12 +96,12 @@
                         throw new Error('Unknown operator');
                 }
                 
-                // Handle very large or very small numbers
+                
                 if (!isFinite(result)) {
                     throw new Error('Result is too large');
                 }
                 
-                // Round to prevent floating point errors
+                
                 result = Math.round(result * 1000000000) / 1000000000;
                 
                 display.value = result.toString();
@@ -135,7 +135,7 @@
             display.value = '0';
         }
 
-        // Keyboard support
+        
         document.addEventListener('keydown', function(event) {
             const key = event.key;
             
@@ -161,5 +161,5 @@
             }
         });
 
-        // Initialize display
+        
         clearAll();
