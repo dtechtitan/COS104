@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>A Calculator</title>
+</head>
+<body>
+
+    <div class="particle" style="top: 10%; left: 10%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+    <div class="particle" style="top: 20%; right: 10%; width: 15px; height: 15px; animation-delay: 1s;"></div>
+    <div class="particle" style="bottom: 20%; left: 20%; width: 25px; height: 25px; animation-delay: 2s;"></div>
+    <div class="particle" style="bottom: 10%; right: 20%; width: 18px; height: 18px; animation-delay: 3s;"></div>
+
+    <div class="calculator">
+        <h1 class="title">DTECHTITAN CALCULATOR</h1>
+        <input type="text" class="display" id="display" readonly placeholder="0">
+        
+        <div class="buttons">
+            <button class="btn btn-special" onclick="clearAll()">AC</button>
+            <button class="btn btn-special" onclick="clearEntry()">CE</button>
+            <button class="btn btn-operator" onclick="appendOperator('%')">%</button>
+            <button class="btn btn-operator" onclick="appendOperator('/')">&divide;</button>
+            
+            <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-operator" onclick="appendOperator('*')">&times;</button>
+            
+            <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-operator" onclick="appendOperator('-')">&minus;</button>
+            
+            <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+            
+            <button class="btn btn-number btn-zero" onclick="appendNumber('0')">0</button>
+            <button class="btn btn-number" onclick="appendNumber('.')">.</button>
+            <button class="btn btn-operator" onclick="appendOperator('**')">x<sup>y</sup></button>
+            
+            <button class="btn btn-equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
